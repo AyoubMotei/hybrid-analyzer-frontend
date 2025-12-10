@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hybrid Analyzer - Accueil</title>
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Hybrid<span class="highlight">Analyzer</span></div>
+        <div class="nav-links">
+            <a href="login.html">Connexion</a>
+            <a href="register.html" class="btn-cta">Commencer</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>L'Intelligence Hybride: <br> <span class="gradient-text">Classer & Comprendre.</span></h1>
+            <p class="hero-sub">
+                Une plateforme d'orchestration puissante combinant la classification Zero-Shot (Hugging Face) 
+                et la synthèse contextuelle (Gemini).
+            </p>
+            <button onclick="goToApp()" class="btn-main">Lancer une analyse <i class="fas fa-arrow-right"></i></button>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="glass-card">
+                <i class="fas fa-sitemap" style="color: #ffd21e; font-size: 2rem; margin-bottom: 10px;"></i>
+                <h3>Classification</h3>
+                <small>Hugging Face</small>
+            </div>
+            <div class="glass-card" style="animation-delay: 2s;">
+                <i class="fas fa-brain" style="color: #3b82f6; font-size: 2rem; margin-bottom: 10px;"></i>
+                <h3>Synthèse</h3>
+                <small>Google Gemini</small>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <h2>Architecture Hybride</h2>
+        <div class="grid-3">
+            <div class="feature-card"><h3>1. Input</h3><p>Texte brut</p></div>
+            <div class="feature-card"><h3>2. Classification</h3><p>BART-Large-MNLI</p></div>
+            <div class="feature-card"><h3>3. Résumé</h3><p>Gemini Flash 2.5</p></div>
+        </div>
+    </section>
+
+    <footer>&copy; 2025 Hybrid Analyzer Project</footer>
+
+    <script>
+        function goToApp() {
+            const token = localStorage.getItem('access_token');
+            window.location.href = token ? 'dashboard.html' : 'register.html';
+        }
+    </script>
+</body>
+</html>

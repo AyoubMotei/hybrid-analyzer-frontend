@@ -1,0 +1,47 @@
+/* Style sombre et moderne pour la landing page */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+body {
+    background: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif;
+    margin: 0; padding: 0; overflow-x: hidden;
+}
+
+.navbar {
+    display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 5%;
+}
+.logo { font-size: 1.5rem; font-weight: 800; }
+.highlight { color: #3b82f6; }
+.nav-links a { color: #fff; text-decoration: none; margin-left: 20px; font-weight: 500; }
+.btn-cta { background: #3b82f6; padding: 0.6rem 1.2rem; border-radius: 50px; transition: 0.3s; }
+.btn-cta:hover { background: #2563eb; }
+
+.hero {
+    min-height: 85vh; display: flex; align-items: center; justify-content: space-between;
+    padding: 0 10%; background: radial-gradient(circle at top right, #1e1b4b, #0f172a 60%);
+}
+.hero-content { max-width: 600px; }
+h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; }
+.gradient-text {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-sub { color: #94a3b8; font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; }
+
+.btn-main {
+    padding: 1rem 2rem; background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border: none; color: white; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem;
+}
+
+.hero-visual { position: relative; width: 400px; height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.glass-card {
+    background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 16px;
+    width: 200px; text-align: center; margin: 10px; animation: float 6s infinite ease-in-out;
+}
+@keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-15px);} }
+
+.features { padding: 4rem 10%; background: #0f172a; text-align: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.feature-card { background: rgba(255,255,255,0.03); padding: 2rem; border-radius: 12px; }
+
+footer { text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #64748b; }

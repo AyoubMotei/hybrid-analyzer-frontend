@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hybrid Analyzer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script src="js/config.js"></script>
+    <script>checkAuth();</script>
+
+    <nav>
+        <h1>Hybrid Analyzer</h1>
+        <button onclick="logout()" class="btn-logout">Se déconnecter</button>
+    </nav>
+
+    <div class="container">
+        <h2>Nouvelle Analyse</h2>
+        <p style="margin-bottom: 1rem; color: #666;">Collez un article pour obtenir sa catégorie et un résumé contextuel.</p>
+        
+        <form onsubmit="handleAnalyze(event)">
+            <div class="form-group">
+                <textarea id="text-input" placeholder="Collez le texte de l'article ici..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Lancer l'analyse</button>
+        </form>
+
+        <div id="loader" class="loading">
+            <svg style="width: 24px; height: 24px; animation: spin 1s linear infinite;" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z"/>
+            </svg>
+            <br>IA en cours de réflexion...
+            <style>@keyframes spin { 100% { transform: rotate(360deg); } }</style>
+        </div>
+
+        <p id="dash-error" class="error-msg"></p>
+
+        <div id="result-card" class="result-card">
+            <div class="result-header">
+                <span id="res-category" class="tag tag-cat">Catégorie</span>
+                <span id="res-score" class="tag tag-score">Score</span>
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Résumé Contextuel</h3>
+                <p id="res-summary" style="line-height: 1.6;">...</p>
+            </div>
+
+            <div>
+                <span id="res-tone" style="font-weight: bold; font-size: 0.9rem;">Ton : Neutre</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --bg: #f3f4f6;
+    --card: #ffffff;
+    --text: #1f2937;
+    --danger: #ef4444;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+body { background-color: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Navbar */
+nav {
+    background: var(--card); padding: 1rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex; justify-content: space-between; align-items: center;
+}
+nav h1 { color: var(--primary); font-size: 1.5rem; }
+
+.btn-logout {
+    background: transparent; border: 1px solid var(--danger); color: var(--danger);
+    padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; transition: 0.2s;
+}
+.btn-logout:hover { background: var(--danger); color: white; }
+
+/* Containers */
+.container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; width: 100%; }
+.auth-container { max-width: 400px; margin: 4rem auto; background: var(--card); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+
+/* Forms */
+.form-group { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.5rem; color: #4b5563; }
+input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 6px; }
+textarea { min-height: 150px; resize: vertical; }
+
+button.btn-primary {
+    width: 100%; padding: 0.75rem; background: var(--primary); color: white;
+    border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; transition: 0.2s;
+}
+button.btn-primary:hover { background: var(--primary-dark); }
+
+/* Results */
+.result-card {
+    background: var(--card); padding: 1.5rem; border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-top: 1.5rem; display: none;
+}
+.result-header { display: flex; justify-content: space-between; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; margin-bottom: 1rem; }
+.tag { padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.85rem; font-weight: 600; }
+.tag-cat { background: #e0f2fe; color: #0284c7; }
+.tag-score { background: #f3f4f6; color: #6b7280; }
+
+.loading { text-align: center; padding: 2rem; display: none; color: #6b7280; }
+.error-msg { color: var(--danger); text-align: center; margin-bottom: 1rem; display: none; }
+.text-center { text-align: center; }
+a { color: var(--primary); text-decoration: none; }
