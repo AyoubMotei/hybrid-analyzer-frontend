@@ -502,8 +502,8 @@ des analystes, porté par le succès du nouveau modèle Pro."
 3. Redirection vers accueil
 
 
--  **Backend Repository** : [hybrid-analyzer-backend](https://github.com/votre-username/hybrid-analyzer-backend)
--  **Frontend Repository** : [hybrid-analyzer-frontend](https://github.com/AyoubMotei/hybrid-analyzer-backend/tree/master)
+-  **Backend Repository** : [hybrid-analyzer-backend](https://github.com/AyoubMotei/hybrid-analyzer-backend/tree/master)
+-  **Frontend Repository** : [hybrid-analyzer-frontend](https://github.com/AyoubMotei/hybrid-analyzer-frontend.git)
 
 ### Documentation externe
 
