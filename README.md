@@ -119,10 +119,10 @@ Frontend
 
 ### Backend requis
 Le frontend dépend du backend pour fonctionner. Assurez-vous que le backend est :
-- ✅ Installé et configuré
-- ✅ En cours d'exécution sur `http://127.0.0.1:8000`
-- ✅ Connecté à PostgreSQL
-- ✅ API Keys Hugging Face et Gemini configurées
+- Installé et configuré
+- En cours d'exécution sur `http://127.0.0.1:8000`
+- Connecté à PostgreSQL
+- API Keys Hugging Face et Gemini configurées
 
 🔗 **[Voir le repository backend →](https://github.com/AyoubMotei/hybrid-analyzer-backend/tree/master)**
 
